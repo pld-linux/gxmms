@@ -2,7 +2,7 @@ Summary:	GNOME panel applet to control XMMS
 Summary(pl):	Aplet panelu GNOME do sterowania XMMS-em
 Name:		gxmms
 Version:	0.1.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://savannah.nongnu.org/download/gxmms/%{name}-%{version}.tar.gz
