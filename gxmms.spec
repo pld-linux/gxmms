@@ -1,5 +1,5 @@
-Summary:	GNOME panel applet
-Summary(pl):	Aplet panelu GNOME
+Summary:	GNOME panel applet to control XMMS
+Summary(pl):	Aplet panelu GNOME do sterowania XMMS-em
 Name:		gxmms
 Version:	0.1.0
 Release:	1
