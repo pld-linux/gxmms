@@ -1,12 +1,12 @@
 Summary:	GNOME panel applet to control XMMS
 Summary(pl):	Aplet panelu GNOME do sterowania XMMS-em
 Name:		gxmms
-Version:	0.1.1
-Release:	2
+Version:	0.2.0
+Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://savannah.nongnu.org/download/gxmms/%{name}-%{version}.tar.gz
-# Source0-md5:	9ccd24388604533f12c4c7ee478cc149
+# Source0-md5:	47fed39bfd65f96321133c19d832812f
 URL:		http://www.nongnu.org/gxmms/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -35,8 +35,12 @@ podstawowe funkcje XMMS.
 %install
 rm -rf $RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{_bindir}
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+mv $RPM_BUILD_ROOT{%{_libdir},%{_bindir}}/gxmms_applet
 
 %find_lang %{name}
 
