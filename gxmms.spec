@@ -5,12 +5,13 @@ Version:	0.1.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
-Source0:	http://www.ccd.uab.es/~aleix/gxmms/download/%{name}-%{version}.tar.gz
+Source0:	http://savannah.nongnu.org/download/gxmms/%{name}-%{version}.tar.gz
 # Source0-md5:	f03a433107c64a07b077621c5bf1787d
-URL:		http://www.ccd.uab.es/~aleix/gxmms/
+URL:		http://www.nongnu.org/gxmms/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gnome-panel-devel >= 2.4.0
 BuildRequires:	xmms-devel >= 1.2.8
-Requires:	xmms
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,6 +26,9 @@ podstawowe funkcje XMMS.
 %setup -q
 
 %build
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
