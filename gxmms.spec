@@ -1,8 +1,15 @@
+#
+# TODO:
+# fix problem with:
+# gxmms_applet:12137): GConf-CRITICAL **: 
+# file gconf-client.c: line 547 (gconf_client_add_dir):
+# assertion `gconf_valid_key (dirname, NULL)' failed
+
 Summary:	GNOME panel applet to control XMMS
 Summary(pl):	Aplet panelu GNOME do sterowania XMMS-em
 Name:		gxmms
 Version:	0.2.0
-Release:	1
+Release:	0.1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://savannah.nongnu.org/download/gxmms/%{name}-%{version}.tar.gz
