@@ -6,7 +6,7 @@
 # assertion `gconf_valid_key (dirname, NULL)' failed
 
 Summary:	GNOME panel applet to control XMMS
-Summary(pl):	Aplet panelu GNOME do sterowania XMMS-em
+Summary(pl.UTF-8):   Aplet panelu GNOME do sterowania XMMS-em
 Name:		gxmms
 Version:	0.2.1
 Release:	0.1
@@ -27,8 +27,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 gXMMS is a simple GNOME panel applet that lets you control the basic
 functions of the X MultiMedia System (XMMS).
 
-%description -l pl
-gXMMS jest prostym apletem panelu GNOME, który pozwala kontrolowaæ
+%description -l pl.UTF-8
+gXMMS jest prostym apletem panelu GNOME, ktÃ³ry pozwala kontrolowaÄ‡
 podstawowe funkcje XMMS.
 
 %prep
