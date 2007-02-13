@@ -6,7 +6,7 @@
 # assertion `gconf_valid_key (dirname, NULL)' failed
 
 Summary:	GNOME panel applet to control XMMS
-Summary(pl.UTF-8):   Aplet panelu GNOME do sterowania XMMS-em
+Summary(pl.UTF-8):	Aplet panelu GNOME do sterowania XMMS-em
 Name:		gxmms
 Version:	0.2.1
 Release:	0.1
