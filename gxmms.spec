@@ -17,7 +17,7 @@ Source0:	http://savannah.nongnu.org/download/gxmms/%{name}-%{version}.tar.gz
 URL:		http://www.nongnu.org/gxmms/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gnome-panel-devel >= 2.4.0
 BuildRequires:	pkgconfig
 BuildRequires:	xmms-devel >= 1.2.8
