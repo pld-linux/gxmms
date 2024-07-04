@@ -8,19 +8,24 @@
 Summary:	GNOME panel applet to control XMMS
 Summary(pl.UTF-8):	Aplet panelu GNOME do sterowania XMMS-em
 Name:		gxmms
-Version:	0.2.1
+Version:	0.3.0
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://savannah.nongnu.org/download/gxmms/%{name}-%{version}.tar.gz
-# Source0-md5:	cdb986fa0545b787ac71ef6336823831
+# Source0-md5:	fd1faca60413ff3c893535d4a856c5ea
 URL:		http://www.nongnu.org/gxmms/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-tools
 BuildRequires:	gnome-panel-devel >= 2.4.0
+BuildRequires:	gnome-panel-devel < 3
+BuildRequires:	gtk+2-devel >= 1:2.0.0
+BuildRequires:	intltool
 BuildRequires:	pkgconfig
+# also bmp-devel >= 0.9.0 supported
 BuildRequires:	xmms-devel >= 1.2.8
+Requires:	xmms >= 1.2.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,18 +43,18 @@ podstawowe funkcje XMMS.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--with-xmms
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_bindir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-mv $RPM_BUILD_ROOT{%{_libdir},%{_bindir}}/gxmms_applet
+%{__mv} $RPM_BUILD_ROOT{%{_libexecdir},%{_bindir}}/gxmms_applet
 
 %find_lang %{name}
 
@@ -59,8 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/gxmms
 %{_datadir}/%{name}
-%{_libdir}/bonobo/servers/*
-%{_datadir}/gnome-2.0/ui/*
-%{_pixmapsdir}/*.png
+%{_libdir}/bonobo/servers/GNOME_gxmmsApplet.server
+%{_datadir}/gnome-2.0/ui/GNOME_gxmmsApplet.xml
+%{_pixmapsdir}/gxmms.png
+%{_pixmapsdir}/gxmms_mini.png
